@@ -1,7 +1,7 @@
 package com.delkabo.helpers;
 
-import cloud.autotests.config.Project;
 import com.codeborne.selenide.Configuration;
+import com.delkabo.config.Project;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 

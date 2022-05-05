@@ -1,5 +1,6 @@
 package com.delkabo.tests;
 
+import com.delkabo.config.Project;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -16,10 +17,10 @@ public class LitresTests extends TestBase {
 
     @Test
     @Description("Тест авторизации")
-    @DisplayName("На странице авторизации должен быть div элемент иконки")
+    @DisplayName("Авторизация на сайте")
     void titleTest() {
-        String myLogin = System.getProperty("myLogin");
-        String myPassword = System.getProperty("myPassword");
+        String myLogin = Project.loginLitres;
+        String myPassword = Project.passwordLitres;
 
         step("Открыть url 'https://www.litres.ru/'", () ->
                 open("https://www.litres.ru/"));
@@ -27,7 +28,7 @@ public class LitresTests extends TestBase {
         step("выбор иконки лк", () ->
                 $(".Login-module__loginLink").click());
 
-        step("выбор ", () -> $(".Button-module__primary_orange").click());
+        step("выбор ", () -> $(".childContainer-0-2-4").click());
 
         step("ввод логина", () -> $(".AuthorizationPopup-module__input").setValue(myLogin));
 
@@ -42,7 +43,7 @@ public class LitresTests extends TestBase {
     }
 
     @Test
-    @Description("Найти книгу")
+    @Description("поиск книги 'Война и Мир")
     @DisplayName("Найти книгу 'Война и Мир'")
     void findBook() {
 
@@ -75,7 +76,7 @@ public class LitresTests extends TestBase {
     }
 
     @Test
-    @Description("Проверить раздел")
+    @Description("Найти раздел 'Книжные бестселлеры'")
     @DisplayName("Найти раздел 'Книжные бестселлеры'")
     void checkPopular() {
 

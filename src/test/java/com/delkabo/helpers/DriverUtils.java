@@ -1,7 +1,7 @@
 package com.delkabo.helpers;
 
-import cloud.autotests.config.Project;
 import com.codeborne.selenide.Selenide;
+import com.delkabo.config.Project;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.RemoteWebDriver;
